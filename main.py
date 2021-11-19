@@ -5,7 +5,8 @@ leao = Animal()
 leao.nome = 'Simba'
 leao.peso = 7.5
 leao.alimentar(1.5)
-leao.imprimir()
+leao.set_nome('Mufasa')
+leao.get_nome()
 
 zebra = Animal()
 zebra.nome = "Valentina"
