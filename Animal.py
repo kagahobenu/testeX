@@ -2,6 +2,10 @@ class Animal():
     nome = ''
     peso = 0
 
+    def __init__(self, nome, peso):
+        self.__nome = nome
+        self.__peso = peso
+
     def alimentar(self, comida):
         self.peso += comida
 
@@ -9,11 +13,13 @@ class Animal():
         print('Meu nome é: ', self.nome)
         print('Meu peso é: ', self.peso, 'kg')
 
-    def get_nome(self):
-        return self.nome
+    @property
+    def nome(self):
+        return self.__nome
 
-    def set_nome(self, novo_nome):
+    @nome.setter
+    def nome(self, novo_nome):
         if (type(novo_nome) == type(str())):
-            self.nome = novo_nome
+            self.__nome = novo_nome
         else:
             print('Digite apenas texto.')
