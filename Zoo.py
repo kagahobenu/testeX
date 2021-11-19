@@ -1,7 +1,10 @@
 class Zoo():
-    animal = ''
-    nome = ''
+    catalogo = list()
+
+    def adicionar(self, animal):
+        self.catalogo.append(animal)
 
     def imprimir(self):
-        print('O animal é: ', self.animal)
-        print('A nome é: ', self.nome)
+        for animal in self.catalogo:
+            animal.imprimir()
+            print()
