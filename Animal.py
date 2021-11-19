@@ -3,8 +3,12 @@ class Animal():
     peso = 0
 
     def __init__(self, nome, peso):
+
         self.__nome = nome
         self.__peso = peso
+
+    def __str__(self):
+        return f'Nome: {self.nome}\nPeso: {self.peso:.2f}'
 
     def alimentar(self, comida):
         self.peso += comida
